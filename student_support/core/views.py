@@ -1,7 +1,10 @@
+from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Student, Activity, FinancialSupport, Grade, Dormitory, Penalty
 from .serializers import StudentSerializer, ActivitySerializer, FinancialSupportSerializer, GradeSerializer, DormitorySerializer, PenaltySerializer
 
+def home(request):
+    return render(request, 'home.html')
 
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()

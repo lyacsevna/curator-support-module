@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Модуль поддержки студентов</title>
+</head>
+<body>
+    <header>
+        <h1>Модуль поддержки студентов</h1>
+        <nav>
+            <ul>
+                <li><a href="#students">Студенты</a></li>
+                <li><a href="#activities">Активности</a></li>
+                <li><a href="#financial-support">Финансовая поддержка</a></li>
+                <li><a href="#grades">Оценки</a></li>
+                <li><a href="#dormitories">Общежития</a></li>
+                <li><a href="#penalties">Штрафы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="students">
+            <h2>Студенты</h2>
+            <button onclick="fetchStudents()">Загрузить студентов</button>
+            <div id="student-list" aria-live="polite"></div>
+        </section>
+
+        <section id="activities">
+            <h2>Активности</h2>
+            <button onclick="fetchActivities()">Загрузить активности</button>
+            <div id="activity-list" aria-live="polite"></div>
+        </section>
+
+        <section id="financial-support">
+            <h2>Финансовая поддержка</h2>
+            <button onclick="fetchFinancialSupport()">Загрузить финансовую поддержку</button>
+            <div id="financial-support-list" aria-live="polite"></div>
+        </section>
+
+        <section id="grades">
+            <h2>Оценки</h2>
+            <button onclick="fetchGrades()">Загрузить оценки</button>
+            <div id="grade-list" aria-live="polite"></div>
+        </section>
+
+        <section id="dormitories">
+            <h2>Общежития</h2>
+            <button onclick="fetchDormitories()">Загрузить общежития</button>
+            <div id="dormitory-list" aria-live="polite"></div>
+        </section>
+
+        <section id="penalties">
+            <h2>Штрафы</h2>
+            <button onclick="fetchPenalties()">Загрузить штрафы</button>
+            <div id="penalty-list" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Модуль поддержки студентов</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

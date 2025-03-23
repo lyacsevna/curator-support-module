@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import StudentViewSet, ActivityViewSet, FinancialSupportViewSet, GradeViewSet, DormitoryViewSet, PenaltyViewSet
+from .views import StudentViewSet, ActivityViewSet, FinancialSupportViewSet, GradeViewSet, DormitoryViewSet, PenaltyViewSet, home
 
 router = DefaultRouter()
 router.register(r'students', StudentViewSet)
@@ -11,5 +11,6 @@ router.register(r'dormitories', DormitoryViewSet)
 router.register(r'penalties', PenaltyViewSet)
 
 urlpatterns = [
+    path('', home, name='home'),
     path('api/', include(router.urls)),
 ]
